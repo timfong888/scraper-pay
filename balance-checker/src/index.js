@@ -1,5 +1,5 @@
 async function checkUSDCBalance(walletAddress, rpcUrl) {
-	const USDC_CONTRACT = "0x7F5c764cBc14f9669B88837ca1490cCa17c31607";
+	const USDC_CONTRACT = "0x0b2c639c533813f4aa9d7837caf62653d097ff85";
   
 	const data = `0x70a08231000000000000000000000000${walletAddress.slice(2).toLowerCase()}`;
   
@@ -32,7 +32,7 @@ async function checkUSDCBalance(walletAddress, rpcUrl) {
 	  console.log('Raw balance (wei):', rawBalance);
   
 	  // Convert to USDC with 6 decimals
-	  const balance = Number(rawBalance) / 1_000_000;
+	  const balance = Number(rawBalance) / 1000000;
 	  console.log('Converted balance (USDC):', balance);
   
 	  return balance;
